@@ -8,10 +8,6 @@
 <body>
     <h1>Pizza Order</h1>
 
-    @if(isset($total_bill))
-        <p>Your total bill is RM{{ $total_bill }}</p>
-    @endif
-
     <form method="POST" action="{{ route('calculate') }}">
         @csrf
         <label for="size">Size:</label>
