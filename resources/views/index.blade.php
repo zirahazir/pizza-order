@@ -8,10 +8,6 @@
 <body>
     <h1>Pizza Order</h1>
 
-    @if(isset($total_bill))
-        <p>Your total bill is RM{{ $total_bill }}</p>
-    @endif
-
     <form method="POST" action="{{ route('calculate') }}">
         @csrf
         <label for="size">Size:</label>
@@ -29,7 +25,7 @@
         <input type="radio" name="extra_cheese" value="yes"> Yes
         <input type="radio" name="extra_cheese" value="no" checked> No<br><br>
 
-        <button type="submit">Calculate</button>
+        <button type="submit">Order</button>
     </form>
 </body>
 </html>

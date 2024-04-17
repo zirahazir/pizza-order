@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PizzaOrderController;
+use App\Http\Controllers\PaymentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +18,4 @@ use App\Http\Controllers\PizzaOrderController;
 Route::get('/', [PizzaOrderController::class, 'index']);
 Route::post('/calculate', [PizzaOrderController::class, 'calculate'])->name('calculate');
 Route::get('/order/details', [PizzaOrderController::class, 'orderDetails'])->name('order.details');
+Route::post('/process-payment', [PaymentController::class, 'processPayment'])->name('process.payment');
